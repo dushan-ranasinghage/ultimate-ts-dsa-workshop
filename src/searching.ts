@@ -28,11 +28,13 @@ function binarySearch(arr: number[], left: number, right: number, findValue: num
 }
 
 function searchingProgram(): void {
-    // let foundIndex: number = linearSearch([7, 6, 5, 4, 3, 2, 1], 5);
-    // let array: number[] = [1, 2, 3, 4, 5, 6, 7, 8];
-    // let length: number = array.length;
-    // let foundIndex: number = binarySearch(array, 0, length - 1, 2);
-    // console.log(foundIndex);
+    let unSortedArray: number[] = [7, 6, 5, 4, 3, 2, 1];
+    let foundIndex1: number = linearSearch(unSortedArray, 5);
+    console.log("Linear Search", foundIndex1);
+    let array: number[] = [1, 2, 3, 4, 5, 6, 7, 8];
+    let length: number = array.length;
+    let foundIndex2: number = binarySearch(array, 0, length - 1, 2);
+    console.log("Binary Search", foundIndex2);
 }
 
 export { searchingProgram };

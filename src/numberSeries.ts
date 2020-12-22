@@ -78,7 +78,7 @@ function cubeSeries(num: number): number[] {
     let series: number[] = [];
 
     for (let i = 1; i < num + 1; i++) {
-        console.log(i * i * i);
+        series.push(i * i * i);
     }
 
     return series;
@@ -103,15 +103,15 @@ function primeSeries(num: number): number[] {
 }
 
 function numberSeriesProgram(): void {
-    console.log("Total Sum", sum(6));
+    console.log("Natural Numbers Sum", sum(6));
     console.log("Factorial", factorial(3));
-    console.log("Even Numbers", evenNumberSum(10));
-    console.log("Odd Numbers", oddNumberSum(10));
+    console.log("Even Numbers Sum", evenNumberSum(10));
+    console.log("Odd Numbers Sum", oddNumberSum(10));
     console.log("Fibonacii Series", fibonaciiSeries(10));
     console.log("Square Series", squareSeries(10));
     console.log("Triangle Series", triangleSeries(10));
     console.log("Cube Series", cubeSeries(10));
-    console.log("Prime Series", primeSeries(100));
+    console.log("Prime Series", primeSeries(50));
 }
 
 export { numberSeriesProgram };

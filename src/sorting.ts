@@ -48,9 +48,10 @@ function selectionSort(arr: number[]): number[] {
 };
 
 function sortingProgram(): void {
-    let sortedArray1: number[] = bubbleSort([3, 5, 2, 4, 7, 1, 8, 6]);
-    let sortedArray2: number[] = insertionSort([3, 5, 2, 4, 7, 1, 8, 6]);
-    let sortedArray3: number[] = selectionSort([3, 5, 2, 4, 7, 1, 8, 6]);
+    let unSortedArray: number[] = [3, 5, 2, 4, 7, 1, 8, 6];
+    let sortedArray1: number[] = bubbleSort(unSortedArray);
+    let sortedArray2: number[] = insertionSort(unSortedArray);
+    let sortedArray3: number[] = selectionSort(unSortedArray);
     console.log("Bubble Sort", sortedArray1);
     console.log("Insertion Sort", sortedArray2);
     console.log("Selection Sort", sortedArray3);

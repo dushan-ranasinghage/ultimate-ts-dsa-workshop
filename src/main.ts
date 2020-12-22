@@ -7,7 +7,7 @@ import { numberSeriesProgram } from "./numberSeries";
 function mainFunc(): void {
   console.log("----START-Main Method----");
   // testProgram();
-  arrayHelpers();
+  // arrayHelpers();
   // sortingProgram();
   // searchingProgram();
   // numberSeriesProgram();

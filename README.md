@@ -1,1 +1,1 @@
-# ts-offline-algo-practice
+# Ultimate Typescript Data Structures and Algorithms Workshop

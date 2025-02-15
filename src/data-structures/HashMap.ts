@@ -11,13 +11,13 @@ interface IHashMap {
   set: (key: string, value: any) => void;
 }
 
-type TItem = {
+type Item = {
   key: string;
   value: any;
 };
 
 class HashMap implements IHashMap {
-  private bucket: TItem[] = [];
+  private bucket: Item[] = [];
 
   _size: number;
 
@@ -39,3 +39,5 @@ class HashMap implements IHashMap {
 
   set(key: string, value: any): void {}
 }
+
+export default HashMap;

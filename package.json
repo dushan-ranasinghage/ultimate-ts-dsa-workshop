@@ -1,5 +1,5 @@
 {
-  "name": "ts-offline-algo-practice",
+  "name": "ultimate-ts-dsa-workshop",
   "version": "1.0.0",
   "description": "",
   "scripts": {
@@ -12,13 +12,13 @@
   },
   "main": "./dist/main.js",
   "author": {
-    "name": "Dushan Randika",
+    "name": "Dushan Ranasinghage",
     "email": "dushanrandika1994@gmail.com",
-    "url": "https://github.com/dushanrandika"
+    "url": "https://github.com/dushan-ranasinghage"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/dushanrandika/ts-offline-algo-practice.git"
+    "url": "https://github.com/dushan-ranasinghage/ultimate-ts-dsa-workshop.git"
   },
   "license": "MIT",
   "devDependencies": {

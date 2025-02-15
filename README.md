@@ -1,1 +1,1 @@
-# Ultimate Typescript Data Structures and Algorithms Workshop
+# Ultimate TypeScript Data Structures and Algorithms Workshop

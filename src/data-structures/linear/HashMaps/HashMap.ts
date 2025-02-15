@@ -40,4 +40,11 @@ class HashMap implements IHashMap {
   set(key: string, value: any): void {}
 }
 
-export default HashMap;
+const mainHashMap = new HashMap();
+mainHashMap.set("name", "Dushan");
+mainHashMap.set("age", 25);
+mainHashMap.set("city", "Colombo");
+console.log("mainHashMap: ", mainHashMap);
+console.log("mainHashMap.get('name'): ", mainHashMap.get("name"));
+console.log("mainHashMap.get('age'): ", mainHashMap.get("age"));
+console.log("mainHashMap.get('city'): ", mainHashMap.get("city"));

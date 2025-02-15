@@ -1,48 +1,47 @@
-const webpack = require('webpack')
-const failPlugin = require('webpack-fail-plugin')
-const tslint = require('tslint-loader')
+const webpack = require('webpack');
+const path = require('path');
 
-const isProd = process.env.NODE_ENV === 'production'
-var prodPlugins = []
-
-//plugins that are only used for prod builds
-if (isProd) {
-  console.log("Building prod version...")
-  prodPlugins = [
-    new webpack.optimize.UglifyJsPlugin()
-  ]
-}
+const isProd = process.env.NODE_ENV === 'production';
 
 module.exports = {
+  mode: isProd ? 'production' : 'development',
   entry: './src/main.ts',
   output: {
-    filename: './dist/main.js'
+    filename: 'main.js',
+    path: path.resolve(__dirname, 'dist')
   },
-  // Turn on sourcemaps
   devtool: 'source-map',
   resolve: {
-    extensions: ['', '.webpack.js', '.web.js', '.ts', '.js']
+    extensions: ['.ts', '.js']
   },
-  plugins: [
-    failPlugin
-  ].concat(prodPlugins),
+  optimization: {
+    minimize: isProd
+  },
   module: {
-    loaders: [
-      { test: /\.ts$/, loader: 'ts-loader' },
-      // { test: /\.css$/, loader: "style!css" }, // CSS
-      { test: /\.less$/, loader: "style!css!less" }, //LESS https://github.com/webpack/less-loader
-      { test: /\.(eot|svg|ttf|woff|woff2)$/, loader: 'file?name=dist/fonts/[name].[ext]'}, // Fonts
-      { test: /\.(jpg|png|svg)$/, loader: 'file?name=dist/images/[name].[ext]'} // Images
-    ],
-    preLoaders: [
+    rules: [
       {
         test: /\.ts$/,
-        loader: "tslint"
+        use: 'ts-loader',
+        exclude: /node_modules/
+      },
+      {
+        test: /\.less$/,
+        use: ['style-loader', 'css-loader', 'less-loader']
+      },
+      {
+        test: /\.(eot|svg|ttf|woff|woff2)$/,
+        type: 'asset/resource',
+        generator: {
+          filename: 'fonts/[name][ext]'
+        }
+      },
+      {
+        test: /\.(jpg|png|svg)$/,
+        type: 'asset/resource',
+        generator: {
+          filename: 'images/[name][ext]'
+        }
       }
     ]
-  },
-  tslint: {
-    emitErrors: true,
-    failOnHint: true
   }
-}
+};

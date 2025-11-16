@@ -2,7 +2,7 @@
  * @file Prototype.ts
  * @description
  * @author Dushan Ranasinghage
- * @copyright Copyright 2024 - Dushan Ranasinghage All Rights Reserved.
+ * @copyright Copyright 2024 - All Rights Reserved.
  */
 
 const User = {
